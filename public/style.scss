@@ -45,3 +45,36 @@ body > .grid {
  background-repeat: no-repeat;
  background-size: cover;
 }
+
+.articleimg{
+width: 300px;
+height: 300px;
+margin: 20px;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blogpost{
+   background-color: white;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#profile{
+    margin-top: 60px;
+}
+
+.articlediv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    font-size: 10px;
+    margin-left: 10px;
+}

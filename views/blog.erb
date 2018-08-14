@@ -1,0 +1,10 @@
+<div id="blogpost">
+<% @article.each do |single_article| %>
+    <div class="post">
+    <h1><%=single_article.title%></h1>
+    <img class="articleimg" src=<%= single_article.image%>
+    <p><%=single_article.text_content%></p> 
+    </div>
+    <%end%>
+    
+    </div>

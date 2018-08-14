@@ -1,0 +1,11 @@
+<div id="profile">
+<h1><%= @profile.name %><a href="/blog/edit"><i class="edit icon"></i></a><h1>
+<% @users_article.each do |article| %>
+    <div class="articlediv">
+<h3> <%= article.title%> <a href="/blog/edit"><i class="edit icon"></i></a></h3>
+<img class="articleimg"src=<%= article.image %> >
+<p> <%= article.text_content %> </p>
+</div>
+<%end%>
+</div>
+

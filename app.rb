@@ -24,23 +24,25 @@ get '/' do
 end
 
 get "/sign-in" do
+  p @info
   erb :sign_in
 end
 
 post "/sign-in" do
-  @info = "Welcome!"
+  @@info = "Welcome!"
   @user = User.find_by(username: params[:username])
   
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
 
-    @info = "You have been signed in"
+    @@info = "You have been signed in"
 
     redirect "/"
+    p @info
   else
 
-     @info = "Your username or password is incorrect"
-
+     @@info = "Your username or password is incorrect"
+    p @info
     redirect "/sign-in"
   end
 end
@@ -75,15 +77,34 @@ get "/sign-out" do
   redirect "/"
 end
 
+get '/profile' do
+  @user_id = session[:user_id]
+  @profile = User.find_by(id: session[:user_id])
+  @users_article = User.find(@user_id).articles
+  p @users_article
+  p @profile
+  erb :profile
+end
 
 get '/users/:id/edit' do 
   if session[:user_id] == params[:id]
-    #Access thier user profile edit page
+    @profile = User.find_by(id: params[id])
+    
   else
-    #Redirect them and tell them they do not have access to edit other peoples profile pages
+    "<h1>Errorr 404!!</h1>"
   end
 end
 
 get '/blog' do
+  @article = Article.all
 erb :blog
+end
+
+get '/blog/edit' do
+
+end
+
+
+def get_current_user 
+  User.find(session[:user_id])
 end
