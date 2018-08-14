@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 2018_08_14_135742) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.string "image"
-    t.string "text_content"
+    t.text "text_content"
     t.integer "user_id"
-    t.date "article_data"
+    t.date "article_date"
   end
 
   create_table "articles_tags", force: :cascade do |t|
