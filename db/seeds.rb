@@ -1,0 +1,1 @@
+# User.create(name: "Noly", last_name: "Franco", username:"nolyF", password: "1234", email: "noly@gmail.com", birthday: "08/17/2001", image:"https://avatars2.githubusercontent.com/u/19509797?s=400&v=4")

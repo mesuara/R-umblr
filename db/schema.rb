@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_08_14_135742) do
     t.string "password"
     t.string "email"
     t.date "birthday"
+    t.string "image"
   end
 
 end

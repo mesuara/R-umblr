@@ -2,6 +2,11 @@ require 'sinatra'
 
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
+require './models/user'
+require './models/article_tag'
+require './models/article'
+require './models/tag'
+
 
 
 
@@ -16,4 +21,12 @@ get '/' do
         erb :signed
       end
 
+end
+
+get "/sign-in" do
+  erb :sign_in
+end
+
+get "/sign-up" do
+  erb :sign_up
 end
