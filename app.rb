@@ -125,16 +125,12 @@ get '/blog/:id/edit' do
 end
 put '/blog/:id' do 
   @current_article= Article.find(params[:id])
-  @current_article.update(title: params[:title], image: params[:image], text_content: params[:text_content], user_id: session[:user_id], article_date: params[:article_date])
+  @current_article.update(title: params[:title], image: params[:image], text_content: params[:text_content], user_id: session[:user_id])
   redirect '/profile'
 end
-# get '/blog/:id/delete' do
-#   @current_article= Article.find(params[:id])
-  
-# end
+
 get '/blog/delete/:id' do 
-  # @current_article = Article.find(params[:id])
-  # @current_darticle.destroy
+ 
   article_id= params[:id]
    Article.delete(article_id)
   redirect '/profile'

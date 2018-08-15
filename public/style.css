@@ -115,4 +115,61 @@ h1#username {
 #edit {
   margin-top: 70px;
 }
+
+#slogan {
+  margin-top: 20px;
+  font-size: 90px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #5A7D7C;
+}
+
+#sloganbetter {
+  padding-top: 100px;
+  margin-top: 700px;
+  font-size: 90px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #5A7D7C;
+}
+
+.massive.angle.double.down.icon.slider {
+  margin-top: 200px;
+  color: #F0F7F4;
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+  height: 100px;
+  width: 100px;
+}
+
+.quote {
+  margin-top: 800px;
+  padding-bottom: 700px;
+  font-size: 60px;
+  color: #F0F7F4;
+}
+
+.author {
+  font-size: 10px;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
 /*# sourceMappingURL=style.css.map */
