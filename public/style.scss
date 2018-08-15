@@ -67,6 +67,10 @@ margin: 20px;
 
 #profile{
     margin-top: 60px;
+    display: flex;
+}
+h1#username{
+    margin-top: 60px;
 }
 
 .articlediv{
@@ -77,4 +81,9 @@ margin: 20px;
     width: 300px;
     font-size: 10px;
     margin-left: 10px;
+}
+
+#edit{
+    margin-top: 70px;
+    
 }

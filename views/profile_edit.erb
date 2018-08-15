@@ -1,0 +1,56 @@
+
+
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Edit Your acount
+      </div>
+    </h2>
+    <form action="/profile/<%= @current_user.id%>" method="POST" class="ui large form">
+    <input type="hidden" name="_method" value="PUT">
+      <div class="ui stacked secondary  segment">
+      <div class="field">
+          <div class="ui left icon input">
+            <input type="text" name="name" placeholder="name" value= "<%=@current_user.name%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <input type="text" name="lastname" placeholder="lastname" value= "<%=@current_user.last_name%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <input type="text" name="email" placeholder="enter your email" value= "<%=@current_user.email%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <input type="date" name="birthday" placeholder="yyyy/mm/dd" value= "<%=@current_user.birthday%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username" value= "<%=@current_user.username%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" value= "<%=@current_user.password%>">
+          </div>
+        </div>
+        <div class="field">
+        <div class="ui left icon input">
+        <i class="file image outline icon"></i>
+          <input type="text" name="image" placeholder="image url" value= "<%=@current_user.image%>">
+        </div>
+      </div>
+        <input class="ui fluid large teal button" type="submit" value="Save">
+      </div>
+      <a href="/profile/delete/<%=@current_user.id%>"> Delete</a>
+      <div class="ui error message"></div>
+
+    </form>

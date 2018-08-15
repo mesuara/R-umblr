@@ -1,0 +1,10 @@
+<form id="edit" method="POST" action="/blog/<%= @current_article.id %>"> 
+
+    <input type="hidden" name="_method" value="PUT">
+    <%#This is a hidden field we add to trick our browser to send a put request since the browser only recognizes get/post%>
+    <input type="text" name="title" placeholder="Enter a title" value="<%= @current_article.title %>">
+    <input type="text" name="image"  placeholder="Enter an image url" value="<%= @current_article.image%>">  
+    <input type="text" name="text_content" placeholder="Enter new content value="<%= @current_article.text_content %>"> 
+    <input type="date" name="article_date" placeholder="Enter new date" value="<%= @current_article.article_date %>"> 
+    <input type="submit" value="Submit">
+</form>
