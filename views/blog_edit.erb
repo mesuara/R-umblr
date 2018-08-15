@@ -1,10 +1,36 @@
-<form id="edit" method="POST" action="/blog/<%= @current_article.id %>"> 
 
+
+
+<div id="edit" class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Edit the 
+      </div>
+    </h2>
+    <form action="/blog/<%= @current_article.id%>" method="POST" class="ui large form">
     <input type="hidden" name="_method" value="PUT">
-    <%#This is a hidden field we add to trick our browser to send a put request since the browser only recognizes get/post%>
-    <input type="text" name="title" placeholder="Enter a title" value="<%= @current_article.title %>">
-    <input type="text" name="image"  placeholder="Enter an image url" value="<%= @current_article.image%>">  
-    <input type="text" name="text_content" placeholder="Enter new content value="<%= @current_article.text_content %>"> 
-    
-    <input type="submit" value="Submit">
-</form>
+      <div class="ui stacked secondary  segment">
+      <div class="field">
+          <div class="ui left icon input">
+            <input type="text" name="title" placeholder="name" value= "<%=@current_article.title%>">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <input type="text" name="image" placeholder="image url" value= "<%=@current_article.image%>">
+          </div>
+        </div>
+        <div class="field">
+        <textarea rows="4" cols="50" name="text_content" placeholder="Enter new content"><%= @current_article.text_content %>
+        </textarea>
+        </div>
+      
+       
+       
+        <input class="ui fluid large teal button" type="submit" value="Save">
+      </div>
+   
+      <div class="ui error message"></div>
+
+    </form>

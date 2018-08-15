@@ -172,4 +172,8 @@ h1#username {
             transform: translateY(-10px);
   }
 }
+
+#signout {
+  margin-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */
