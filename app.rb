@@ -18,7 +18,7 @@ enable :sessions
 
 
 
-get '/' do
+get "/" do
     if session[:user_id]
         @status = "signed in"
         erb :signed
