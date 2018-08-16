@@ -15,14 +15,16 @@ header{
 }
 h1#logo{
     margin-top: 5px;
-    margin-right: 1130px;
+    margin-right: 1030px;
     margin-bottom: 0px;
 }
 h3#blog{
     margin-right: 10px;
     margin-bottom: 0px;
 }
-
+h3:last-child{
+    margin-right: 30px;
+}
 
 body > .grid {
     height: 100%;
@@ -35,9 +37,8 @@ body > .grid {
   }
 
 
-
-
-
+  
+  
 #lokai{
     margin-top: 50px;
  background-image: url('https://cdn.shopify.com/s/files/1/1366/8315/t/7/assets/our-story-bg.png?');
@@ -181,17 +182,27 @@ color: #5A7D7C;
     border-radius: 50%;
 
 }
+.ui.middle.aligned.center.aligned.grid.singin{
+    margin: 80px;
+    height: 200px;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
    #profile{
        display: flex;
        flex-direction: column;
        align-items: center;
    }
+   #userprofile{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+   }
    #blogpost{
        display: flex;
        flex-direction: column;
-       width: 100%;
+       width: 80%;
        margin: auto;
        margin-top: 100px;
        border-bottom: 5px solid #5A7D7C;
@@ -204,9 +215,47 @@ color: #5A7D7C;
        width:60%;
        height: 50%;
    }
+
+
+.ui.top.fixed.menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 5px;
+}
+
+h1#logo{
+    
+    margin-right: 300px;
+    margin-bottom: -50px;
+}
+#signup h3{
+    font-size: 15px;
+    margin-right: 10px;
+}
+#sloganbetter{
+    font-size: 200%;
+}
+.quote{
+    font-size: 200%;
+}
+h3#blog{
+    margin-right: 150px;
+    margin-bottom: -20px;
+    font-size: 15px;
+}
+#userimage{
+    width: 300px;
+    height: 300px;
+}
+i.icon.plus.square{
+    margin-bottom: 40px;
+}
+#signout h3{
+    font-size: 15px;
+    margin-right: -10px;
+    
+}
   }
   @media screen and (min-width: 1200px) {
-    .profile-pic {
-      float: right;
-    }
+  
   }

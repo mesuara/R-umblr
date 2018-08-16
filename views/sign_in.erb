@@ -2,10 +2,10 @@
 
 <h1 id='slogan'><em>Make the world green again...<em><h1>
 
-<h1> Welcome</h1>
+<h1><%= @info %></h1>
 
 
-<div class="ui middle aligned center aligned grid">
+<div class="ui middle aligned center aligned grid singin">
   <div class="column">
     <h2 class="ui image header">
       <div class="content">
@@ -13,21 +13,21 @@
       </div>
     </h2>
     <form action="/sign-in" method="POST" class="ui large form">
-      <div class="ui stacked secondary  segment">
-        <div class="field">
+      <div class="ui stacked secondary  segment signin">
+        <div class="field username">
           <div class="ui left icon input">
             <i class="user icon"></i>
             <input type="text" name="username" placeholder="Username">
           </div>
         </div>
-        <div class="field">
+        <div class="field pass">
           <div class="ui left icon input">
             <i class="lock icon"></i>
             <input type="password" name="password" placeholder="Password">
           </div>
         </div>
         
-        <input class="ui fluid large teal button"type="submit" value="Log in">
+        <input class="ui fluid large teal button card"type="submit" value="Log in">
       </div>
 
       <div class="ui error message"></div>

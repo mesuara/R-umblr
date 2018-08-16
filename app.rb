@@ -6,12 +6,18 @@ require './models/user'
 require './models/article_tag'
 require './models/article'
 require './models/tag'
+require 'will_paginate'
+require 'will_paginate/active_record'
 
 
 
 
 set :database, {adapter: 'postgresql', database: 'r_mblr'}
 enable :sessions
+
+
+
+
 get '/' do
     if session[:user_id]
         @status = "signed in"
@@ -24,24 +30,24 @@ get '/' do
 end
 
 get "/sign-in" do
-  p @info
+ @info = "Welcome"
   erb :sign_in
 end
 
 post "/sign-in" do
-  @@info = "Welcome!"
+  
   @user = User.find_by(username: params[:username])
   
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
 
-    @@info = "You have been signed in"
+    @info = "You have been signed in"
 
     redirect "/"
     p @info
   else
 
-     @@info = "Your username or password is incorrect"
+     @info = "Your username or password is incorrect"
     p @info
     redirect "/sign-in"
   end
@@ -86,14 +92,6 @@ get '/profile' do
   erb :profile
 end
 
-# get '/users/:id/edit' do 
-#   if session[:user_id] == params[:id]
-#     @profile = User.find_by(id: params[id])
-    
-#   else
-#     "<h1>Errorr 404!!</h1>"
-#   end
-# end
 get '/profile/:id/edit' do
 @current_user = User.find(params[:id])
 erb :profile_edit
@@ -115,7 +113,9 @@ get '/profile/delete/:id' do
 end
 
 get '/blog' do
-  @article = Article.all
+  # @article = Article.all
+  @article = Article.limit(3).offset(params[:page])
+@paginate = Article.paginate(:page => params[:page], :per_page => 3)
 erb :blog
 end
 
@@ -146,7 +146,7 @@ get '/blog/new' do
 end
 
 post '/profile' do 
-  Article.create(title: params[:title], image: params[:image], text_content: params[:text_content], user_id: session[:user_id], article_date: params[:article_date])
+  Article.create(title: params[:title], image: params[:image], text_content: params[:text_content], user_id: session[:user_id])
   redirect '/profile'
 end
 

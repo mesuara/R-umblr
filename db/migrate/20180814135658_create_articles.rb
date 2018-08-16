@@ -5,7 +5,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :image
       t.text :text_content
       t.integer :user_id
-      t.date :article_date
+      t.datetime :created_on
+      
     end
   end
 end
