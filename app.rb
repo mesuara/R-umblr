@@ -1,7 +1,7 @@
 require 'sinatra'
 
 require 'sinatra/activerecord'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require './models/user'
 require './models/article_tag'
 require './models/article'
