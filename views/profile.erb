@@ -2,10 +2,11 @@
 
 
 
+<div id="userprofile">
 
-
-<h1 id="username"><%= @profile.name %><a href="/profile/<%=@profile.id%>/edit"><i class="edit icon"></i></a><h1>
-
+<h1 id="username"><%= @profile.name %><a href="/profile/<%=@profile.id%>/edit"><i class="small edit icon"></i></a><h1>
+<img class="articleimg" id="userimage" src='<%=@profile.image%>'>
+</div>
 <div id="profile">
 <div class="articlediv">
 <a href="/blog/new"><i class="massive plus square icon"></i></a>

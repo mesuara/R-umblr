@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <title>R-umblr</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
@@ -16,13 +17,14 @@
 
 <h3 id="blog"><a href="/blog" />Blog!</a></h3>
 <% if session[:user_id] %>
+<div id="signout">
+<h3 ><a href="/sign-out" />Sign out</a><a href="/profile" />Profile</a></h3>
 
-<h3 id="signout"><a href="/sign-out" />Sign out</a></h3>
-<h3><a href="/profile" />Profile</a></h3>
+</div>
 <% else %>
-
-<h3><a href="/sign-in" />Sign In</a>/<a href="/sign-up" />Sign Up</a></h3>
-
+<div id="signup">
+<h3><a href="/sign-in" >Sign In</a>/<a href="/sign-up" >Sign Up</a></h3>
+</div>
 
 
 <% end %>

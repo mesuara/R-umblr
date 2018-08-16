@@ -79,8 +79,8 @@ end
 
 get '/profile' do
   @user_id = session[:user_id]
-  @profile = User.find_by(id: session[:user_id])
-  @users_article = User.find(@user_id).articles
+  @profile = User.find(@user_id)
+  @users_article = @profile.articles
   p @users_article
   p @profile
   erb :profile
@@ -121,7 +121,11 @@ end
 
 get '/blog/:id/edit' do
   @current_article= Article.find(params[:id])
+  if session[:user_id] == @current_article.user_id
   erb :blog_edit
+  else
+    "Error 404, be a your own creativity"
+  end
 end
 put '/blog/:id' do 
   @current_article= Article.find(params[:id])
