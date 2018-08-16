@@ -12,7 +12,7 @@ require 'will_paginate/active_record'
 
 
 
-set :database, {adapter: 'postgresql', database: 'r_mblr'}
+
 enable :sessions
 
 
