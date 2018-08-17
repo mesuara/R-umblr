@@ -114,7 +114,7 @@ end
 
 get '/blog' do
   # @article = Article.all
-  @article = Article.limit(10).offset(params[:page])
+  @article = Article.all.order("created_on DESC").limit(10).offset(params[:page])
 @paginate = Article.paginate(:page => params[:page], :per_page => 10)
 erb :blog
 end
