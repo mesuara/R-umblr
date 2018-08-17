@@ -106,6 +106,8 @@ body > .grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 h1#username {
@@ -244,6 +246,12 @@ h1#username a {
 .ui.middle.aligned.center.aligned.grid.singin {
   margin: 80px;
   height: 200px;
+}
+
+div .pagination {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 700px) {
