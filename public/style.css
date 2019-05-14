@@ -1,5 +1,5 @@
 body {
-  background-color: #ECFFC3;
+  background-color: #C4DFF7;
 }
 
 header {
@@ -88,7 +88,7 @@ body > .grid {
   border-bottom: 1px solid #5A7D7C;
   margin: 20px;
   padding: 30px;
-  background-image: radial-gradient(circle, #039c18, #61b443, #95cd6b, #c2e596, #ecffc3);
+  background-image: radial-gradient(circle, #C1CAD6, #B0B8C3, #CCD3DD, #D1D8E1, #DDE1E4);
 }
 
 .post #textcontent {
